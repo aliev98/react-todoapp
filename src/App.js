@@ -166,6 +166,7 @@ function App(){
     },
     body: JSON.stringify(updTodo)
   })
+  
   const newTodos = await fetchTasks()
 
    setTodos(newTodos);
