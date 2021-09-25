@@ -166,9 +166,8 @@ function App(){
     },
     body: JSON.stringify(updTodo)
   })
-  
-  const newTodos = await fetchTasks()
 
+  const newTodos = await fetchTasks()
    setTodos(newTodos);
   }
 
@@ -186,7 +185,7 @@ function App(){
           />
       ))}
 
-      {todos.length==0 ? <h3>No todos yet</h3> : null}
+      {todos.length===0 ? <h3>No todos yet</h3> : null}
       <br/>
 
       <button onClick = {toggleTodo} className='new'> {taskToggle? 'Done': 'New Todo'}</button>
